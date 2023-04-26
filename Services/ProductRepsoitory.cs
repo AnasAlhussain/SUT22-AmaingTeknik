@@ -22,7 +22,8 @@ namespace SUT22_AmaingTeknik.Services
         public async Task<Product> Delete(int id)
         {
 
-          var result =  await _appContext.Products.FirstOrDefaultAsync(p => p.ProductId == id);
+          var result =  await _appContext.Products.FirstOrDefaultAsync
+                (p => p.ProductId == id);
             if (result != null)
             {
                 _appContext.Products.Remove(result);
@@ -39,12 +40,14 @@ namespace SUT22_AmaingTeknik.Services
 
         public async Task<Product> GetSingel(int id)
         {
-            return await _appContext.Products.FirstOrDefaultAsync(p => p.ProductId == id);
+            return await _appContext.Products.FirstOrDefaultAsync
+                (p => p.ProductId == id);
         }
 
         public async Task<Product> Update(Product entity)
         {
-            var result = await _appContext.Products.FirstOrDefaultAsync(p => p.ProductId == entity.ProductId);
+            var result = await _appContext.Products.FirstOrDefaultAsync
+                (p => p.ProductId == entity.ProductId);
             if(result != null)
             {
                 result.ProductName = entity.ProductName;

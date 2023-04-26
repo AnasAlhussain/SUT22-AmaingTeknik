@@ -19,6 +19,7 @@ namespace SUT22_AmaingTeknik
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddScoped<IAmazingTeknik<Product>, ProductRepsoitory>();
+            builder.Services.AddScoped<IAmazingTeknik<Order>, OrderRepository>();
 
             // EF Till SQL 
             builder.Services.AddDbContext<AppDbContex>(options =>
