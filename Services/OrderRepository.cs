@@ -21,6 +21,7 @@ namespace SUT22_AmaingTeknik.Services
 
         public async Task<Order> Delete(int id)
         {
+
             var result = await _appDbContext.Orders.
                 FirstOrDefaultAsync(o => o.OrderId == id);
             if (result != null)
