@@ -22,6 +22,7 @@ namespace SUT22_AmaingTeknik
 
             builder.Services.AddScoped<IAmazingTeknik<Product>, ProductRepsoitory>();
             builder.Services.AddScoped<IAmazingTeknik<Order>, OrderRepository>();
+            builder.Services.AddScoped<ICustomerRepository, CusomerRepsitory>();
 
             // EF Till SQL 
             builder.Services.AddDbContext<AppDbContex>(options =>
